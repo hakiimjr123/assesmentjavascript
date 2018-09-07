@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>
+Main Page
+</title>
+<style>
+body {background-color: white;}
+h1   {color: White;}
+p    {color: purple;}
+.navbar {padding: 10px;}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li button {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li button:hover {
+    background-color: white;
+}
+
+.Jsondown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.Jsondown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.Jsondown-content a:hover {
+    background-color: green;
+}
+
+.show {
+    display: block;
+}
+
+.FORMdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.FORMdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.FORMdown-content a:hover {
+    background-color: blue;
+}
+
+.show {
+    display: block;
+</style>
+<head>
+<body>
+
+
+
+
+
+
+
+
+
+</div>
+
+<nav> 
+<!--MAIN NAVIGATION BAR-->
+
+
+<ul>
+  <li><button class="Jbtn" onmouseenter = "funcdropdown()" id = "JSONManip" >JSON
+  <i class="fa fa-caret-down"></i>
+  </button></li>
+  "<br>"
+  <div class = "Jsondown-content" id="myDropdown1">
+      <a href="Trainers.html">Json Manipulation</a>
+    </div>
+  <li><button class="Fbtn" onmouseenter = "functiondropdown()" id = "Formsmanip" >FORMS
+    <i class="fa fa-caret-down"></i>
+  </button></li>"<br>"
+   <div class = "FORMdown-content" id="myDropdown2">
+      <a href="Entryform.html">Entry Form</a>
+	  <a href="Formdata.html">Form Details</a>
+    </div>
+</ul>
+
+</nav>
+
+
+<script>
+
+function funcdropdown() {
+    document.getElementById("myDropdown1").classList.toggle("show");
+}
+window.onmouseenter = function(e) {
+  if (!e.target.matches('.Jbtn')) {
+    var myDropdown1 = document.getElementById("myDropdown1");
+      if (myDropdown1.classList.contains('show')) {
+        myDropdown1.classList.remove('show');
+      }
+  }
+}
+</script>
+<script>
+function functiondropdown() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+window.onmouseenter = function(e) {
+  if (!e.target.matches('.Fbtn')) {
+    var myDropdown2 = document.getElementById("myDropdown2");
+      if (myDropdown2.classList.contains('show')) {
+        myDropdown2.classList.remove('show');
+      }
+  }
+}
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

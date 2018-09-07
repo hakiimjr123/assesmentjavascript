@@ -1,0 +1,79 @@
+<html>
+<head>
+<title> Entry</title>
+</head>
+<body>
+
+
+<form onsubmit = "return requirement()" action="Formdata.html">
+Name:<br>
+<input type "text" id = "Name1" 
+placeholder = "Place Name here"
+alt = "please place Name"/>
+<br>
+DateOfBirth<br>
+<input type = "text" id = "Dates" 
+alt="Enter date of birth"/>
+<br>
+Address<br>
+<input type = "text" id = "add" 
+placeholder= "address here"
+alt= "enter your address"/>
+<br>
+PostCode<br>
+<input type="text" id= "PCode"
+placeholder="POSTCODE HERE"
+alt= "enter your postcode"/>
+<br>
+EMAIL:<br>
+<input type = "email" id= "Emails" 
+placeholder = "Please place Emails here"
+alt =  "PLEASE PLACE EMAIL HERE"/>
+<button > Submit info
+</button>
+
+
+</form>
+<script>
+function requirement(){
+var alphaexp = /^[a-zA-Z]+$/;
+var dateexp = /\d{1,2}\/\d{1,2}\/\d{4}$/;
+var addexp = /[A-Za-z0-9]$/;
+var postexp = /[A-Za-z0-9].{8,15}/;
+var emailexp = /w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}$/;
+var condition1 = document.getElementById("Emails");
+var condition2 =  document.getElementById("PCode");
+var condition3 = document.getElementById("add");
+var condition4 = document.getElementById("Dates");
+var condition5 = document.getElementById("Name1");
+
+if (!condition1.value || !condition2.value || !condition3.value || !condition4.value || !condition5.value){
+window.alert(alerter);
+return false;
+}
+if(!(condition5.value.match(alphaexp))){
+console.log("Tried to use illegal Character1");
+return false;
+}
+ if(!(condition4.value.match(dateexp))){
+console.log("Tried to use illegal Character2");
+return false;
+}
+if(!(condition3.value.match(addexp))){
+console.log("Tried to use illegal Character3");
+return false;
+}
+if(!(condition1.value.match(emailexp))){
+console.log("Tried to use illegal Character5");
+return false;
+}
+}
+</script>
+<script>
+var alerter= "PLEASE ENTER CORRECT VALUE";
+</script>
+
+
+
+</body>
+</html>

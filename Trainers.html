@@ -1,0 +1,60 @@
+<html>
+<head>
+
+<title> Trainers </title>
+</head>
+<body>
+
+<form action="abc.html">
+<input type ="text" id = "trainers" >
+<button type = "button" onclick = "trainers1()"> Search
+ </button> 
+<form>
+
+
+
+
+<script src = "data.js">
+</script>
+<script>
+console.log(data)
+</script>
+
+<script>
+function trainers1(){
+var myobj, x 
+var inside = document.getElementById("trainers").value;
+myobj = data;
+
+if(!inside){
+window.alert(alertyou);
+return false;
+}
+
+if(inside == "Matt"){
+document.write(myobj.members[0]);
+
+}
+if(inside == "Dev"){
+document.write(myobj.members[1]);
+
+}
+
+
+if(inside == "Shafeeq"){
+document.write(myobj.members[2]);
+}}
+</script>
+
+<script>
+var alertyou= "PLEASE ENTER VALUE";
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
